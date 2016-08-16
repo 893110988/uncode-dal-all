@@ -36,7 +36,7 @@ public class MybatisDALTest {
     	startService();
 		baseDAL = (BaseDAL) context.getBean("baseDAL");
         User user = new User();
-        user.setId(124);
+        user.setId(1);
         QueryResult result =  baseDAL.selectByPrimaryKey(user);
         System.out.println(result.get());
     }
@@ -47,6 +47,7 @@ public class MybatisDALTest {
     }
     @Test
     public void testSelectByPrimaryKey3(){
+        startService();
         QueryResult result =  baseDAL.selectByPrimaryKey(User.class, 1);
         System.out.println(result.get());
     }

@@ -56,6 +56,7 @@ public class DynamicDataSource extends AbstractDataSource implements Initializin
 	
 	public void setDataSourceLookup(DataSourceLookup dataSourceLookup) {
 		this.dataSourceLookup = (dataSourceLookup != null ? dataSourceLookup : new JndiDataSourceLookup());
+
 	}
 	
 	protected Object determineCurrentLookupKey() {

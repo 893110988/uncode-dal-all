@@ -16,7 +16,15 @@ public class MybatisDAL  extends AbstractBaseDAL implements BaseDAL {
     
     private SqlSessionTemplate sqlSessionTemplate;
 
-    public void setCommonMapper(CommonMapper commonMapper) {
+	public SqlSessionTemplate getSqlSessionTemplate() {
+		return sqlSessionTemplate;
+	}
+
+	public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
+		this.sqlSessionTemplate = sqlSessionTemplate;
+	}
+
+	public void setCommonMapper(CommonMapper commonMapper) {
         this.commonMapper = commonMapper;
     }
 
